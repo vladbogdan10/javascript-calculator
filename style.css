@@ -1,0 +1,140 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+	font-family: Arial;
+	background-color: rgb(23, 37, 57);
+	display: -webkit-flex;
+	display: flex;
+	-webkit-justify-content: center;
+	justify-content: center;
+}
+
+.calculator {
+	margin-top: 110px;
+	width: 350px;
+	max-width: 100%;
+	-webkit-box-shadow: 0 0 10px 0 rgba(0,0,0,0.3);
+	-moz-box-shadow: 0 0 10px 0 rgba(0,0,0,0.3);
+	box-shadow: 0 0 10px 0 rgba(0,0,0,0.3);
+}
+
+.display {
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	padding: 32px;
+	height: 140px;
+	width: 100%;
+	text-align: right;
+	background-color: rgb(6, 14, 29);
+	color: white;
+	font-size: 36px;
+}
+
+.operators {
+	display: -webkit-flex;
+	display: flex;
+	width: 100%;
+	height: 80px;
+}
+
+.operators-btn {
+	cursor: pointer;
+	width: 100%;
+	height: 100%;
+	font-size: 24px;
+	border: none;
+	background-color: rgb(14, 27, 46);
+	color: white;
+	-webkit-transition: all 0.1s ease-out;
+	transition: all 0.1s ease-out;
+}
+
+.operators-btn:active {
+	-webkit-box-shadow: inset 0 0 8px 0 rgba(0,0,0,0.3);
+	-moz-box-shadow: inset 0 0 8px 0 rgba(0,0,0,0.3);
+	box-shadow: inset 0 0 8px 0 rgba(0,0,0,0.3);
+}
+
+.operators-btn:focus {
+	outline: none;
+}
+
+.numbers {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.panel1 {
+	width: 75%;
+	display: -webkit-flex;
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: row-reverse;
+	align-items: flex-end;
+	align-content: flex-end;
+}
+
+.panel2 {
+	display: -webkit-flex;
+	display: flex;
+	flex-direction: column;
+	width: 25%;
+}
+
+
+.numbers-btn {
+	cursor: pointer;
+	width: 33.3%;
+	height: 80px;
+	border: none;
+	font-size: 24px;
+	background-color: rgb(23, 37, 57);
+	color: white;
+	-webkit-transition: all 0.1s ease-out;
+	transition: all 0.1s ease-out;
+}
+
+.numbers-btn:active {
+	-webkit-box-shadow: inset 0 0 8px 0 rgba(0,0,0,0.3);
+	-moz-box-shadow: inset 0 0 8px 0 rgba(0,0,0,0.3);
+	box-shadow: inset 0 0 8px 0 rgba(0,0,0,0.3);
+}
+
+.numbers-btn:focus {
+	outline: none;
+}
+
+.numbers-btn:nth-child(11) {
+	width: 66.6%;
+}
+
+.right-btns {
+	cursor: pointer;
+	width: 100%;
+	height: 80px;
+	font-size: 24px;
+	border: none;
+	background-color: rgb(23, 37, 57);
+	color: white;
+	-webkit-transition: all 0.1s ease-out;
+	transition: all 0.1s ease-out;
+}
+
+.right-btns:active {
+	-webkit-box-shadow: inset 0 0 8px 0 rgba(0,0,0,0.3);
+	-moz-box-shadow: inset 0 0 8px 0 rgba(0,0,0,0.3);
+	box-shadow: inset 0 0 8px 0 rgba(0,0,0,0.3);
+}
+
+.right-btns:focus {
+	outline: none;
+}
+
+.right-btns:last-child {
+	height: 50%;
+	font-size: 30px;
+}
+
