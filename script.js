@@ -1,36 +1,45 @@
 var calculator = (function() {
-
     var btns = document.getElementsByTagName('button');
+
     for (var i = 0; i < btns.length; i++) {
-        btns[i].onclick = btnsValue;
+        btns[i].onclick = getValueAndCalculate;
     }
 
-    function btnsValue(e) {
-        // Get the input and button values
-        var input = document.querySelector('.screen');
-        var inputVal = input.innerHTML;
-        var btnVal = this.getAttribute('value');
-       	
-        if (btnVal == 'C') {
-            input.innerHTML = '';
+    function getValueAndCalculate() {
+    	var screen = document.querySelector('.calc-screen');
+        var input = screen.innerHTML;
+        var btnValue = this.getAttribute('value');
+        var lastChar = input.charAt(input.length - 1);
+        console.log(lastChar);
 
-        } else if (btnVal == '=') {
-            var equation = inputVal;
+        if (btnValue === '=') {
+            var calculate = input;
+            calculate = calculate.replace(/×/g, '*').replace(/÷/g, '/');
+            if (screen.innerHTML !== '') {
+                screen.innerHTML = eval(calculate);
+            }
 
-            equation = equation.replace(/×/g, '*').replace(/÷/g, '/');
+        } else if (btnValue === 'C') {
+            screen.innerHTML = '';
 
-            input.innerHTML = eval(equation);
-            
+        } else if (btnValue === 'del') {
+            var delInput;
+            delInput = input.substr(0, input.length - 1);
+            screen.innerHTML = delInput;
+
         } else {
-        	input.innerHTML += btnVal;
+            screen.innerHTML += btnValue;
+
         }
 
-        // prevent page jumps
-        e.preventDefault();
+        if (lastChar === '×' || lastChar === '÷' || lastChar === '+' || lastChar === '-') {
+            if (btnValue === '×' || btnValue === '÷' || btnValue === '+' || btnValue === '-') {
+                screen.innerHTML = input.substring(0, input.length - 1) + btnValue;
+            }
+        }
     }
 
 })();
-
 
 
 

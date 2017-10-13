@@ -3,8 +3,9 @@
 }
 
 body {
+	margin: 0;
 	font-family: Arial;
-	background-color: rgb(23, 37, 57);
+	background-color: rgb(45, 38, 57);
 	display: -webkit-flex;
 	display: flex;
 	-webkit-justify-content: center;
@@ -20,7 +21,7 @@ body {
 	box-shadow: 0 0 10px 0 rgba(0,0,0,0.3);
 }
 
-.screen {
+.calc-screen {
 	display: flex;
 	justify-content: center;
 	flex-direction: column;
@@ -28,7 +29,7 @@ body {
 	height: 140px;
 	width: 100%;
 	text-align: right;
-	background-color: rgb(6, 14, 29);
+	background-color: #1B1721;
 	color: white;
 	font-size: 36px;
 }
@@ -46,7 +47,8 @@ body {
 	height: 100%;
 	font-size: 24px;
 	border: none;
-	background-color: rgb(14, 27, 46);
+	background-color: rgb(71, 44, 70);
+	background-color: #1B1721;
 	color: white;
 	-webkit-transition: all 0.1s ease-out;
 	transition: all 0.1s ease-out;
@@ -91,7 +93,7 @@ body {
 	height: 80px;
 	border: none;
 	font-size: 24px;
-	background-color: rgb(23, 37, 57);
+	background-color: rgb(45, 38, 57);
 	color: white;
 	-webkit-transition: all 0.1s ease-out;
 	transition: all 0.1s ease-out;
@@ -117,7 +119,7 @@ body {
 	height: 80px;
 	font-size: 24px;
 	border: none;
-	background-color: rgb(23, 37, 57);
+	background-color: rgb(45, 38, 57);
 	color: white;
 	-webkit-transition: all 0.1s ease-out;
 	transition: all 0.1s ease-out;
@@ -138,3 +140,24 @@ body {
 	font-size: 30px;
 }
 
+@media only screen and (max-width: 500px) {
+	body, html {
+		height: 100%;
+	}
+
+	.calculator {
+		margin-top: 0;
+		width: 100%;
+		box-shadow: none;
+	}
+
+	.calc-screen {
+		height: 35%;
+	}
+
+	.operators-btn,
+	.numbers-btn,
+	.right-btns {
+		cursor: none;
+	}
+}
