@@ -6,7 +6,7 @@ var calculator = (function() {
     }
 
     function getValueAndCalculate() {
-    	var screen = document.querySelector('.calc-screen');
+        var screen = document.querySelector('.calc-screen');
         var input = screen.innerHTML;
         var btnValue = this.getAttribute('value');
         var lastChar = input.charAt(input.length - 1);
@@ -40,6 +40,3 @@ var calculator = (function() {
     }
 
 })();
-
-
-

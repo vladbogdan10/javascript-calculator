@@ -47,17 +47,12 @@ body {
 	height: 100%;
 	font-size: 24px;
 	border: none;
-	background-color: rgb(71, 44, 70);
 	background-color: #1B1721;
 	color: white;
-	-webkit-transition: all 0.1s ease-out;
-	transition: all 0.1s ease-out;
 }
 
 .operators-btn:active {
-	-webkit-box-shadow: inset 0 0 8px 0 rgba(0,0,0,0.3);
-	-moz-box-shadow: inset 0 0 8px 0 rgba(0,0,0,0.3);
-	box-shadow: inset 0 0 8px 0 rgba(0,0,0,0.3);
+	background-color: rgb(31, 26, 38);
 }
 
 .operators-btn:focus {
@@ -75,14 +70,12 @@ body {
 	display: flex;
 	flex-wrap: wrap;
 	flex-direction: row-reverse;
-	align-items: flex-end;
-	align-content: flex-end;
 }
 
 .panel2 {
 	display: -webkit-flex;
 	display: flex;
-	flex-direction: column;
+	flex-wrap: wrap;
 	width: 25%;
 }
 
@@ -95,14 +88,10 @@ body {
 	font-size: 24px;
 	background-color: rgb(45, 38, 57);
 	color: white;
-	-webkit-transition: all 0.1s ease-out;
-	transition: all 0.1s ease-out;
 }
 
 .numbers-btn:active {
-	-webkit-box-shadow: inset 0 0 8px 0 rgba(0,0,0,0.3);
-	-moz-box-shadow: inset 0 0 8px 0 rgba(0,0,0,0.3);
-	box-shadow: inset 0 0 8px 0 rgba(0,0,0,0.3);
+	background-color: #2A2335;
 }
 
 .numbers-btn:focus {
@@ -121,14 +110,10 @@ body {
 	border: none;
 	background-color: rgb(45, 38, 57);
 	color: white;
-	-webkit-transition: all 0.1s ease-out;
-	transition: all 0.1s ease-out;
 }
 
 .right-btns:active {
-	-webkit-box-shadow: inset 0 0 8px 0 rgba(0,0,0,0.3);
-	-moz-box-shadow: inset 0 0 8px 0 rgba(0,0,0,0.3);
-	box-shadow: inset 0 0 8px 0 rgba(0,0,0,0.3);
+	background-color: #2A2335;
 }
 
 .right-btns:focus {
@@ -136,7 +121,7 @@ body {
 }
 
 .right-btns:last-child {
-	height: 50%;
+	height: 160px;
 	font-size: 30px;
 }
 
@@ -152,7 +137,7 @@ body {
 	}
 
 	.calc-screen {
-		height: 35%;
+		height: 40%;
 	}
 
 	.operators-btn,
