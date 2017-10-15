@@ -10,7 +10,6 @@ var calculator = (function() {
         var input = screen.innerHTML;
         var btnValue = this.getAttribute('value');
         var lastChar = input.charAt(input.length - 1);
-        console.log(lastChar);
 
         if (btnValue === '=') {
             var calculate = input;
