@@ -31,7 +31,8 @@ body {
 	text-align: right;
 	background-color: #1B1721;
 	color: white;
-	font-size: 32px;
+	font-size: 30px;
+	overflow-y: auto;
 	word-wrap: break-word;
 }
 

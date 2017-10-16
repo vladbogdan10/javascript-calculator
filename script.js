@@ -9,17 +9,23 @@ var calculator = (function() {
         var screen = document.querySelector('.calc-screen');
         var input = screen.innerHTML;
         var btnValue = this.getAttribute('value');
-        var lastChar = input.charAt(input.length - 1);
+
+        if (input.length >= 17) {
+            screen.style.fontSize = '22px';
+        }
 
         if (btnValue === '=') {
             var calculate = input;
             calculate = calculate.replace(/×/g, '*').replace(/÷/g, '/');
             if (screen.innerHTML !== '') {
                 screen.innerHTML = eval(calculate);
+
             }
 
         } else if (btnValue === 'C') {
+            screen.style.fontSize = '30px';
             screen.innerHTML = '';
+
 
         } else if (btnValue === 'del') {
             var delInput;
@@ -31,11 +37,19 @@ var calculator = (function() {
 
         }
 
-        if (lastChar === '×' || lastChar === '÷' || lastChar === '+' || lastChar === '-') {
-            if (btnValue === '×' || btnValue === '÷' || btnValue === '+' || btnValue === '-') {
-                screen.innerHTML = input.substring(0, input.length - 1) + btnValue;
+        var lastChar = input.charAt(input.length - 1);
+        if (lastChar === '×' || lastChar === '÷' || lastChar === '+' || lastChar === '-' || lastChar === '.') {
+            if (btnValue === '×' || btnValue === '÷' || btnValue === '+' || btnValue === '-' || btnValue === '.') {
+                screen.innerHTML = input.substr(0, input.length - 1) + btnValue;
             }
+
         }
+
+        var firstChar = screen.innerHTML.charAt(0);
+        if (input === '' && firstChar === '×' || firstChar === '÷' || firstChar === '+') {
+            screen.innerHTML = '';
+
+        } 
     }
 
 })();
