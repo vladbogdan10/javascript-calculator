@@ -142,9 +142,4 @@ body {
 		height: 40%;
 	}
 
-	.operators-btn,
-	.numbers-btn,
-	.right-btns {
-		cursor: none;
-	}
 }
